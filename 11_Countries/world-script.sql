@@ -34,7 +34,6 @@ ORDER BY percentage DESC;
 -- -- Part 6
 -- SELECT name, government_form, capital, life_expectancy FROM countries
 -- WHERE capital > 200 AND government_form = 'Constitutional Monarchy' AND life_expectancy > 75
--- order by life_expectancy DESC
 
 -- =========================================================================================================
 -- -- Part 7
