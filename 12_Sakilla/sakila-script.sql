@@ -16,3 +16,10 @@
 -- JOIN film ON film.film_id = film_actor.film_id
 -- JOIN actor ON actor.actor_id = film_actor.actor_id
 -- WHERE actor.actor_id = 5
+
+-- ======================================================================================
+-- PART-4
+SELECT * FROM customer
+JOIN address ON address.address_id = customer.address_id
+JOIN city ON city.city_id = address.city_id
+WHERE store_id = 1 and city.city_id = 1 or city.city_id = 42 or city.city_id = 312 or city.city_id = 459
