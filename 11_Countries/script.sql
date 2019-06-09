@@ -3,7 +3,7 @@
 -- WHERE languages.language = "Slovene"
 -- ORDER BY percentage DESC;
 -- =========================================================================================================
--- -- Part 2
+-- -- Part 2 [Most difficult problem from set]
 -- https://stackoverflow.com/questions/1346345/mysql-count-the-occurrences-of-distinct-values
 -- SELECT cities.country_id as Country_ID, countries.name AS Country_Name, COUNT(*) AS Number_of_Cities FROM cities
 -- JOIN countries ON countries.id = cities.country_id
@@ -12,14 +12,11 @@
 
 -- =========================================================================================================
 -- -- Part 3
--- SELECT * FROM cities
--- SELECT name, population, country_id FROM cities
--- WHERE cities.population > 500e3 AND cities.country_id = 136
+SELECT cities.name as City_Name, cities.population, cities.country_id, countries.name as Country_Name FROM cities
+JOIN countries ON countries.id = cities.country_id
+WHERE cities.population > 500e3 AND countries.name = 'Mexico'
+ORDER BY population DESC;
 
---  SELECT * FROM countries
---  WHERE countries.name = "Mexico"
-
--- TODO: Attempt to join on country_id
 
 -- =========================================================================================================
 -- -- Part 4
